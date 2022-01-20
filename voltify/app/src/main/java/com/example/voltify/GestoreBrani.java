@@ -6,10 +6,11 @@ public class GestoreBrani {
     public GestoreBrani(){
         ListaBrani = new ArrayList<Brano>();
     }
-    public void addBrano(String titolo){
+    public void addBrano(Brano titolo){
         Brano br = new Brano(titolo);
         ListaBrani.add(br);
     }
+}
 
     public void ListaBrani()
     {

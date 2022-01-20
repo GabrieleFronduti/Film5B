@@ -9,11 +9,15 @@ public class Brano {
     private Date dataCreazione;
 
     public Brano(String titolo){
-        this.titolo = titolo;
+        this.titolo=titolo;
         this.durata=durata;
         this.autore=autore;
         this.dataCreazione=dataCreazione;
     }
+
+    public Brano(String titolo, String toString, String toString1, String toString2) {
+    }
+
     public String getTitolo(){
         return this.titolo;
     }
