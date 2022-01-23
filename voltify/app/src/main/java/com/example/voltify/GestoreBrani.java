@@ -6,19 +6,26 @@ public class GestoreBrani {
     public GestoreBrani(){
         ListaBrani = new ArrayList<Brano>();
     }
-    public void addBrano(Brano titolo){
-        Brano br = new Brano(titolo);
-        ListaBrani.add(br);
-    }
-}
+    public void addBrano(Brano b){
 
-    public void ListaBrani()
+        ListaBrani.add(b);
+    }
+
+    public String toString(Brano b){
+        return b.getTitolo()+" "+b.getAutore()+" "+b.getDurata()+" "+b.getGenere();
+    }
+
+    public String ListaBrani()
     {
-        StringBuilder stBui = new StringBuilder();
-        for (Brano brV : ListaBrani)
+        StringBuilder s = new StringBuilder();
+        for (Brano b : ListaBrani)
         {
-            stBui.append(brV.toString());
-            stBui.append("\n");
+            s.append(b.getTitolo());
+            s.append(b.getAutore());
+            s.append(b.getDurata());
+            s.append(b.getGenere());
+            s.append("\n");
         }
+        return s.toString();
     }
 }

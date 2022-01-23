@@ -29,7 +29,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Titolo"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnVisualizza"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,22 +41,30 @@
         android:id="@+id/btnInserisci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:ignore="NotSibling"
-        tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="514dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="468dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="215dp"
+        android:text="Inserisci brano"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtitolo"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.752"
+        tools:ignore="NotSibling" />
+
+    <Button
+        android:id="@+id/btnVisualizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="552dp"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="131dp"
+        android:text="Visualizza brani"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Spinner
@@ -64,15 +72,13 @@
         android:layout_width="120dp"
         android:layout_height="23dp"
         android:layout_marginStart="146dp"
-        android:layout_marginTop="195dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="344dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="171dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnInserisci"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtdurata"
@@ -85,7 +91,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Autore"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnVisualizza"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -94,14 +100,14 @@
         android:id="@+id/txtautore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="278dp"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="191dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="197dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="489dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="autore"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

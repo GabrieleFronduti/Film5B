@@ -20,16 +20,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/viewBrano"
-        android:layout_width="323dp"
-        android:layout_height="621dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="106dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/music"
+        android:layout_width="281dp"
+        android:layout_height="547dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="50dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

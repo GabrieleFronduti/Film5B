@@ -16,6 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity
 {
     Button btnInserisci;
+    Button btnVisualizza;
     EditText txtitolo;
     EditText txtdurata;
     EditText txtautore;
@@ -23,13 +24,17 @@ public class MainActivity extends AppCompatActivity
     Spinner spnGenere;
     ArrayAdapter<String>spGen;
     String[] elencogeneri = {"jazz", "Hip-hop", "grunge", "reagge"};
+    Brano b;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnInserisci=findViewById(R.id.btnInserisci);
+        btnVisualizza=findViewById(R.id.btnVisualizza);
         txtitolo=findViewById(R.id.txtitolo);
+        txtdurata=findViewById(R.id.txtdurata);
+        txtautore=findViewById(R.id.txtautore);
         spnGenere = (Spinner)findViewById(R.id.spnGenere);
         ArrayAdapter<String> spGen = new ArrayAdapter<String>(this,
                 R.layout.support_simple_spinner_dropdown_item, elencogeneri);
@@ -46,25 +51,36 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Brano b = new Brano(txtitolo.getText().toString(), txtdurata.getText().toString(),
+                String testo= "brano creato";
+                b=new Brano[];
+                b.setTitolo(txtitolo.getText().toString());
+                b.setAutore(txtdurata.getText().toString());
+                b.setDurata(txtdurata.getText().toString());
+                b.setGenere(spnGenere.getSelectedItem().toString());
+                gb.addBrano(b);
+                /*Brano b = new Brano(txtitolo.getText().toString(), txtdurata.getText().toString(),
                         txtautore.getText().toString(), spnGenere.getSelectedItem().toString());
                 gb.addBrano(b);
-                Log.d("brano creato", b.toString());
+                Log.d("brano creato", b.toString());*/
 
                 /*String genselezionato = spnGenere.getSelectedItem().toString();
-                Toast.makeText(getApplicationContext(),genselezionato,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),testo,Toast.LENGTH_LONG).show();
                 gb.addBrano(txtitolo.getText().toString());*/
             }
         });
         btnInserisci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Canzoni2.class);
+                String lista = gb.ListaBrani();
+                Intent i= new Intent(getApplicationContext(), Canzoni2.class);
+                i.putExtra("musica",lista);
+                startActivity(i);
+                /*Intent intent = new Intent(getApplicationContext(), Canzoni2.class);
                 intent.putExtra("tit", (Parcelable) txtitolo);
                 intent.putExtra("d", (Parcelable) txtdurata);
                 intent.putExtra("aut", (Parcelable) txtautore);
                 intent.putExtra("spn", (Parcelable) spnGenere);
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
     }
